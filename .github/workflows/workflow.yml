@@ -44,9 +44,12 @@ jobs:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
       - name: Run Rubocop
-        run: rubocop
+        run: |
+        cd api
+        rubocop
       - name: Run RSpec
         run: >-
+          cd api
           COVERAGE=true bundle exec rspec -f j -o tmp/rspec_results.json -f p
           --require rails_helper
         env:
