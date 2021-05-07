@@ -1,6 +1,5 @@
 ﻿name: Tests
 'on':
-  - pull_request
   - push
 jobs:
   build:
@@ -31,6 +30,7 @@ jobs:
       - name: Bundle install
         run: |
           gem install bundler
+          cd api
           bundle install --jobs 4 --retry 3
       - name: Setup Database
         run: |
@@ -43,11 +43,13 @@ jobs:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
       - name: Run Rubocop
-        run: rubocop
+        run: |
+          cd api
+          rubocop
       - name: Run RSpec
-        run: >-
-          COVERAGE=true bundle exec rspec -f j -o tmp/rspec_results.json -f p
-          --require rails_helper
+        run: |
+          cd api
+          COVERAGE=true bundle exec rspec -f j -o tmp/rspec_results.json -f p --require rails_helper
         env:
           RAILS_ENV: test
           POSTGRES_USER: postgres

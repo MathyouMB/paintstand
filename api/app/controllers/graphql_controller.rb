@@ -32,7 +32,7 @@ class GraphqlController < ApplicationController
   def current_user
     header = request.headers[:Authentication]
     decrypted = JWT.decode(header, Rails.application.secrets.secret_key_base.byteslice(0..31))[0] # decrypt token using secret key
-    user = User.fetch(decrypted['id']) # find the user given the decrypted id
+    user = User.fetch(decrypted["id"]) # find the user given the decrypted id
     user
   rescue JWT::DecodeError
     nil
@@ -60,6 +60,6 @@ class GraphqlController < ApplicationController
     logger.error(e.message)
     logger.error(e.backtrace.join("\n"))
 
-    render(json: { error: { message: e.message, backtrace: e.backtrace }, data: {} }, status: 500)
+    render(json: { error: { message: e.message, backtrace: e.backtrace }, data: {} }, status: :internal_server_error)
   end
 end
