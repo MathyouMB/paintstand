@@ -6,5 +6,7 @@ require:
 inherit_gem:
     rubocop-shopify: rubocop.yml
 AllCops:
+    NewCops: enable
     Exclude:
         - 'config/environments/development.rb'
+        - 'db/migrate/20210507031246_create_image_tags.rb'
