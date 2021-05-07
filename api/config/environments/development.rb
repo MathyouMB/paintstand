@@ -14,16 +14,27 @@ Rails.application.configure do
 
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
-  if Rails.root.join("tmp", "caching-dev.txt").exist?
-    config.cache_store = :memory_store
-    config.public_file_server.headers = {
-      "Cache-Control" => "public, max-age=#{2.days.to_i}",
-    }
-  else
-    config.action_controller.perform_caching = false
+  # config.cache_store = :redis_store, {
+  #  host: 'redis', # Should be 'localhost' if not using docker-compose setup
+  #  port: 6379,
+  #  db: 0,
+  #  namespace: 'cache',
+  # }, {
+  #  expires_in: 90.minutes,
+  # }
 
-    config.cache_store = :null_store
-  end
+  config.cache_store = :redis_store_with_cas, {
+    host: 'localhost',
+    port: 6379,
+    db: 0,
+    namespace: 'cache',
+    expires_in: 15.minutes,
+    race_condition_ttl: 1,
+  }
+
+  IdentityCache.cache_backend = ActiveSupport::Cache.lookup_store(*Rails.configuration.cache_store)
+  config.active_record.cache_versioning = false
+  Redis.exists_returns_integer = false
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local
