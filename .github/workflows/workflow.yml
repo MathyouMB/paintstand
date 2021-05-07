@@ -48,7 +48,7 @@ jobs:
         cd api
         rubocop
       - name: Run RSpec
-        run: >-
+        run: |
           cd api
           COVERAGE=true bundle exec rspec -f j -o tmp/rspec_results.json -f p
           --require rails_helper
