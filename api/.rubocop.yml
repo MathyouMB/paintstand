@@ -1,0 +1,10 @@
+inherit_from: .rubocop_todo.yml
+require:
+    - rubocop-rails
+    - rubocop-faker
+    - rubocop-rspec
+inherit_gem:
+    rubocop-shopify: rubocop.yml
+AllCops:
+    Exclude:
+        - 'config/environments/development.rb'
