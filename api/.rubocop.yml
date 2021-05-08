@@ -10,3 +10,4 @@ AllCops:
     Exclude:
         - 'config/environments/development.rb'
         - 'db/migrate/20210507031246_create_image_tags.rb'
+        - 'spec/graphql/mutations/images/upload_canvas_spec.rb'
