@@ -4,6 +4,6 @@ FactoryBot.define do
     username { Faker::Name.first_name }
     password { Faker::Internet.password(min_length: 10, max_length: 20) }
     balance { 100 }
-    role { 'public' }
+    role { "public" }
   end
 end

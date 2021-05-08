@@ -1,31 +1,31 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe(Tag, type: :model) do
   let(:tag) { build(:tag) }
 
-  describe 'Tag Attribute Validations' do
+  describe "Tag Attribute Validations" do
     let(:result) { tag.valid? }
 
-    it 'valid tag' do
+    it "valid tag" do
       expect(result).to(be(true))
     end
 
-    context 'When tag has no name' do
+    context "when tag has no name" do
       before { tag.name = nil }
 
-      it 'returns false' do
+      it "returns false" do
         expect(result).to(be(false))
       end
     end
 
-    context 'When two tags have the same name' do
+    context "when two tags have the same name" do
       let(:tag_copy) { create(:tag, name: tag.name) }
 
       before do
         tag.name = tag_copy.name
       end
 
-      it 'returns false' do
+      it "returns false" do
         expect(result).to(be(false))
       end
     end
