@@ -1,11 +1,16 @@
-<script lang="ts">
-  export let name: string;
+<script>
+  import Router from 'svelte-spa-router';
+  import {Home, Image, NotFound, Paint} from './pages';
+  const routes = {
+    '/': Home,
+    '/image': Image,
+    '/paint': Paint,
+    '*': NotFound
+  };
 </script>
 
-<h1>{name}</h1>
+<Router {routes} />
 
 <style type="text/scss">
-  h1 {
-    color: red;
-  }
+  @import 'global.scss';
 </style>
