@@ -7,8 +7,14 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Install modules
-      run: yarn
+      run: |
+        cd client
+        yarn
     - name: Run Prettier
-      run: yarn run format
+      run: |
+        cd client
+        yarn run format
     - name: Run Jest
-      run: yarn run test
+      run: |
+        cd client
+        yarn run test
