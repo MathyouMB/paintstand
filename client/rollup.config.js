@@ -5,12 +5,13 @@ import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import sveltePreprocess from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
+import replace from "rollup-plugin-replace";
 
 const production = !process.env.ROLLUP_WATCH;
 
 function serve() {
 	let server;
-	
+
 	function toExit() {
 		if (server) server.kill(0);
 	}
@@ -57,6 +58,9 @@ export default {
 		resolve({
 			browser: true,
 			dedupe: ['svelte']
+		}),
+		replace({
+			'process.env.NODE_ENV': JSON.stringify( 'production' )
 		}),
 		commonjs(),
 		typescript({

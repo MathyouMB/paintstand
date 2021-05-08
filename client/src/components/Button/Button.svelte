@@ -1,23 +1,21 @@
 <script>
-    import { createEventDispatcher } from 'svelte'
+  import {createEventDispatcher} from 'svelte';
 
-    // props
-    export let label
+  // props
+  export let label;
 
-    // onClick
-    const dispatch = createEventDispatcher()
+  // onClick
+  const dispatch = createEventDispatcher();
 
-    const onClick = (event) => {
-      dispatch('click', event)
-    }
+  const onClick = event => {
+    dispatch('click', event);
+  };
 </script>
 
-<button
-    on:click={onClick}>
-    <div class="button_label">{label}</div>
-
+<button on:click={onClick}>
+  <div class="button_label">{label}</div>
 </button>
 
 <style type="text/scss">
-    @import 'Button.scss';
+  @import 'Button.scss';
 </style>
