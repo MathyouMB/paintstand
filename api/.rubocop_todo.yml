@@ -141,3 +141,6 @@ Style/SymbolArray:
 # URISchemes: http, https
 Layout/LineLength:
   Max: 200
+
+Rails/UniqueValidationWithoutIndex:
+  Enabled: false
