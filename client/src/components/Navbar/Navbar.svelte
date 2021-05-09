@@ -7,7 +7,7 @@
   <div class="navbar-inner">
     <a href="/" use:link>
       <div class="logo">
-        <img class="logo-image" src="/logo.png" alt="logo" />
+        <img class="logo-image" src="/logo2.png" alt="logo" />
       </div>
     </a>
     <a href="/paint" use:link>
