@@ -16,7 +16,7 @@ user2 = User.create(
 
 image1 = Image.create!(
   title: "Day on the Ocean",
-  description: "A paiting of a boat on the ocean.",
+  description: "A painting of a boat on the ocean.",
   creator_id: user1.id,
   owner_id: user2.id,
   price: 10,
@@ -27,7 +27,7 @@ image1.attached_image.attach(io: File.open("assets/1.png"), filename: "1.png")
 
 image2 = Image.create!(
   title: "Rabbit with Carrot",
-  description: "A paiting of a Rabbit and a Carrot.",
+  description: "A painting of a Rabbit and a Carrot.",
   creator_id: user2.id,
   owner_id: user1.id,
   price: 10,
@@ -38,7 +38,7 @@ image2.attached_image.attach(io: File.open("assets/2.png"), filename: "2.png")
 
 image3 = Image.create!(
   title: "Nemo",
-  description: "A paiting of some orange fish.",
+  description: "A painting of some orange fish.",
   creator_id: user1.id,
   owner_id: user2.id,
   price: 10,
@@ -49,7 +49,7 @@ image3.attached_image.attach(io: File.open("assets/3.png"), filename: "3.png")
 
 image4 = Image.create!(
   title: "Pizza",
-  description: "A paiting of a pizza slice.",
+  description: "A painting of a pizza slice.",
   creator_id: user2.id,
   owner_id: user1.id,
   price: 10,
@@ -60,7 +60,7 @@ image4.attached_image.attach(io: File.open("assets/4.png"), filename: "4.png")
 
 image5 = Image.create!(
   title: "Rose",
-  description: "A paiting of a rose.",
+  description: "A painting of a rose.",
   creator_id: user1.id,
   owner_id: user2.id,
   price: 10,
@@ -71,7 +71,7 @@ image5.attached_image.attach(io: File.open("assets/5.png"), filename: "5.png")
 
 image6 = Image.create!(
   title: "Over the Hill",
-  description: "A paiting of a hill side.",
+  description: "A painting of a hill side.",
   creator_id: user2.id,
   owner_id: user1.id,
   price: 10,

@@ -4,11 +4,12 @@
   import {createHttpLink} from 'apollo-link-http';
   import {setClient} from 'svelte-apollo';
 
+  import {Footer, Navbar} from './components';
   import {Home, Image, NotFound, Paint} from './pages';
 
   const routes = {
     '/': Home,
-    '/image': Image,
+    '/image/:id': Image,
     '/paint': Paint,
     '*': NotFound
   };
@@ -30,7 +31,9 @@
   setClient(client);
 </script>
 
+<Navbar />
 <Router {routes} />
+<Footer />
 
 <style type="text/scss">
   @import 'global.scss';
