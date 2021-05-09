@@ -1,6 +1,5 @@
 <script>
   import {query} from 'svelte-apollo';
-  import {gql} from '@apollo/client';
   import Icon from 'fa-svelte';
   import {faSearch} from '@fortawesome/free-solid-svg-icons';
   import {link} from 'svelte-spa-router';
