@@ -19,12 +19,11 @@
   let price = 0;
 
   async function upload() {
-    let dataUri = canvas.toDataURL('image/png')
+    let dataUri = canvas.toDataURL('image/png');
     try {
       await uploadCanvas({variables: {title, description, price, dataUri}});
-      window.location.assign("localhost:5000")
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   }
 
