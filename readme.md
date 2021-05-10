@@ -97,7 +97,7 @@ After you've properly configured PostgreSQL and Redis run the following commands
 
 <img src="/documentation/rails_success.png">
 
-## Client Setup
+## Client Setup (optional)
 
 <img src="/documentation/svelte_logo.png" width="150px">
 
