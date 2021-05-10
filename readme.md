@@ -58,7 +58,7 @@ The following is a list of features the platform supports:
 
 To set up and configure this application, you can either install the various dependencies as described below or use the provided dockerfile and `docker-compose.yml`. If you plan to use the Docker, skip to [Docker Setup](#-docker-setup).
 
-This project was built using Ruby on Rails and will require you to have <a href="https://www.ruby-lang.org/en/news/2019/04/17/ruby-2-6-3-released/">Ruby 2.6.3</a> and <a href="https://weblog.rubyonrails.org/2020/6/17/Rails-6-0-3-2-has-been-released/">Ruby on Rails 6.0.3.2</a>. Additionally you will need PostgreSQL and Redis installed.
+This projects API was built using Ruby on Rails and will require you to have <a href="https://www.ruby-lang.org/en/news/2019/04/17/ruby-2-6-3-released/">Ruby 2.6.3</a> and <a href="https://weblog.rubyonrails.org/2020/6/17/Rails-6-0-3-2-has-been-released/">Ruby on Rails 6.0.3.2</a>. Additionally you will need PostgreSQL and Redis installed.
 
 Once you have installed the aforementioned technologies, clone this repo and modify `config/database.yml` to match your local PostgreSQL credentials.
 ```ruby
@@ -96,6 +96,17 @@ After you've properly configured PostgreSQL and Redis run the following commands
 
 
 <img src="/documentation/rails_success.png">
+
+## Client Setup
+
+<img src="/documentation/svelte_logo.png" width="200px">
+
+The project's frontend is built with Svelte and uses the yarn package manager. To setup the client (which is entirely optional because this is a backend development challenge) install yarn and run the following commands in the client directory.
+
+```bash
+  yarn install
+  yarn run dev
+```
 
 ## 🐳 Docker Setup
 
