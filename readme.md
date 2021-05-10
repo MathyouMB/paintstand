@@ -99,9 +99,9 @@ After you've properly configured PostgreSQL and Redis run the following commands
 
 ## Client Setup
 
-<img src="/documentation/svelte_logo.png" width="200px">
+<img src="/documentation/svelte_logo.png" width="150px">
 
-The project's frontend is built with Svelte and uses the yarn package manager. To setup the client (which is entirely optional because this is a backend development challenge) install yarn and run the following commands in the client directory.
+The project's frontend is built with Svelte and uses the Yarn package manager. To setup the client (which is entirely optional because this is a backend development challenge) install Yarn and run the following commands in the client directory.
 
 ```bash
   yarn install
