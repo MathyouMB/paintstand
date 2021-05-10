@@ -2,22 +2,28 @@
 
 ### Getting started
 ```bash
-npm install
+yarn install
 ```
 
 ### Start Dev
 ```bash
-npm run dev
+yarn run dev
 ```
 
 ### Start tests
 ```bash
-npm run test
+yarn run test
 ```
 
 ### Format
 ```bash
-npm run format
+yarn run format
+```
+
+
+### Storybook
+```bash
+yarn run storybook
 ```
 
 ### Resources
