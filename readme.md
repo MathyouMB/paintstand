@@ -6,7 +6,7 @@ The following project is my <a href="https://docs.google.com/document/d/1ZKRywXQ
 
 <hr>
 
-![CI](https://github.com/MathyouMB/Shopistrate/workflows/Tests/badge.svg) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/MathyouMB/Shopistrate/blob/master/LICENSE) [![Made With Love](https://img.shields.io/badge/Made%20With-Love-orange.svg)](https://github.com/MathyouMB/Shopistrate)
+![API Tests](https://github.com/MathyouMB/paintstand/workflows/API/badge.svg) ![Client Tests](https://github.com/MathyouMB/paintstand/workflows/Client/badge.svg) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/MathyouMB/paintstand/blob/master/LICENSE) [![Made With Love](https://img.shields.io/badge/Made%20With-Love-orange.svg)](https://github.com/MathyouMB/paintstand)
 
 <hr>
 
@@ -39,7 +39,7 @@ The following project is my <a href="https://docs.google.com/document/d/1ZKRywXQ
 
 ## 💻 Features
 
-For my solution to the Developer Intern Challenge, I have created Shopistrate, a theoretical platform where users can create and sell illustrations. User's can purchase, collect, and re-sell the art of other users for higher prices to climb a global wealth leaderboard.
+For my solution to the Developer Intern Challenge, I have created Paint Stand, a theoretical platform where users can create and sell illustrations. User's can purchase, collect, and re-sell the art of other users for higher prices to climb a global wealth leaderboard.
 
 The following is a list of features the platform supports:
 
@@ -215,13 +215,13 @@ If you do not have a valid JWT token in the Authentication header on specific op
 
 <img src="/documentation/graphql_logo.png" width="200px">
 
-The Shopistrate API is built using GraphQL.
+The Paint Stand API is built using GraphQL.
 
 ### API Design
 
 In designing this GraphQL API, I choose to follow the <a href="https://github.com/Shopify/graphql-design-tutorial/blob/master/TUTORIAL.md">guidelines</a> created by the Shopify API Patterns Team (<a href="https://youtu.be/2It9NofBWYg">Described in this 2018 GraphQL Conference talk by Leane Shapton</a>).
 
-One of the Shopify API Patterns team's GraphQL guidelines is to <a href="https://youtu.be/2It9NofBWYg?t=329">Not expose implementation detail in your API design</a>. To follow this guideline, I abstracted out the ImageTags join table from Shopistrate's domain model.
+One of the Shopify API Patterns team's GraphQL guidelines is to <a href="https://youtu.be/2It9NofBWYg?t=329">Not expose implementation detail in your API design</a>. To follow this guideline, I abstracted out the ImageTags join table from Paint Stands's domain model.
 
 Additionally, to improve the performance of my API and remove multiple unnecessary round trips to datastores from nested GraphQL queries (<a href="https://engineering.shopify.com/blogs/engineering/solving-the-n-1-problem-for-graphql-through-batching/">the N+1 query problem</a>), I have defined batch loaders using Shopify's <a href="https://github.com/Shopify/graphql-batch">GraphQL-Batch gem</a>.
 
@@ -376,8 +376,8 @@ to run all provided tests and generate a simplecov code coverage report.
 
 <img src="/documentation/github_actions.png" width="200px">
 
-Using Github Actions, this repository has been configured to run all rspec tests and rubocop linting on all commits and pull requests. Futher information about the Github Actions continuous integration configuration can be viewed <a href="https://github.com/MathyouMB/Shopistrate/actions">here</a>.
+Using Github Actions, this repository has been configured to run all rspec tests and rubocop linting on all commits and pull requests. Futher information about the Github Actions continuous integration configuration can be viewed <a href="https://github.com/MathyouMB/paintstand/actions">here</a>.
 
 ## License
 
-MIT. See <a href="https://github.com/MathyouMB/Shopistrate/blob/master/LICENSE">LICENSE</a> for more details.
+MIT. See <a href="https://github.com/MathyouMB/paintstand/blob/master/LICENSE">LICENSE</a> for more details.
